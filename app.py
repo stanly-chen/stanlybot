@@ -64,19 +64,11 @@ def callback_yangbot8():
         #userId = event['source']['userId']
         if(text.lower()=='me'):
             content = str(event.source.user_id)
-            line_bot_api_8.reply_message(
-                event.reply_token,
-                TextSendMessage(text=content)
-            )
-        elif (text.lower() == 'test'):
-            content = "Hello Stanly"
 
             line_bot_api_8.reply_message(
                 event.reply_token,
                 TextSendMessage(text=content)
             )
-
-
         elif(text.lower() == 'profile'):
             profile = line_bot_api_8.get_profile(event.source.user_id)
             my_status_message = profile.status_message
